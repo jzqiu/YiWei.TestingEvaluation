@@ -54,6 +54,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="MBTITesingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WXPay\JsApiPay.cs" />
     <Compile Include="WXPay\WxPayApi.cs" />
     <Compile Include="WXPay\WxPayData.cs" />
     <Compile Include="WXPay\WxPayException.cs" />
