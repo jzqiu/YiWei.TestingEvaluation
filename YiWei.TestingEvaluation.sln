@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.TestingEvaluation.H5Site", "YiWei.TestingEvaluation.H5Site\YiWei.TestingEvaluation.H5Site.csproj", "{3D82F360-37FA-4E80-906E-8B7DEE20C7DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10.App", "10.App", "{46E3AF85-1945-4932-A619-58FDC2306A53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20.Controllers", "20.Controllers", "{0AAC55E9-7BF9-4D2C-BEBB-EBF964F3CE63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30.Domain", "30.Domain", "{B0C66BA0-0C37-470E-BAF3-1EFDC6889F0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "40.Data", "40.Data", "{6A8A0DD2-A4C0-4F10-BE9D-821733250B93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50.Models", "50.Models", "{38735864-5C33-4114-A907-F3BA8BFBCFAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "60.Infrastructure", "60.Infrastructure", "{A8EC6A35-CB30-4448-9160-D78B70218599}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "70.SolutionItem", "70.SolutionItem", "{C13F54AD-737E-4453-9A4B-9A6D0C9B2F79}"
+	ProjectSection(SolutionItems) = preProject
+		70.SolutionItem\TCBase.Component.QRCode.dll = 70.SolutionItem\TCBase.Component.QRCode.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.TestingEvaluation.Controllers", "20.Controllers\YiWei.TestingEvaluation.Controllers\YiWei.TestingEvaluation.Controllers.csproj", "{196E8868-4308-445C-BB2D-AD10BE48E627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.Utility", "60.Infrastructure\YiWei.Utility\YiWei.Utility.csproj", "{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.TestingEvaluation.Data", "40.Data\YiWei.TestingEvaluation.Data\YiWei.TestingEvaluation.Data.csproj", "{2A8303F7-0AE8-4BE3-9BAF-08008220FC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.TestingEvaluation.Entity", "50.Models\YiWei.TestingEvaluation.Entity\YiWei.TestingEvaluation.Entity.csproj", "{DDB2310F-5829-4929-814C-3C00ACD1DF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YiWei.TestingEvaluation.Domain", "30.Domain\YiWei.TestingEvaluation.Domain\YiWei.TestingEvaluation.Domain.csproj", "{27574E19-9428-4ADA-8767-4A70C36C2FC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D82F360-37FA-4E80-906E-8B7DEE20C7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D82F360-37FA-4E80-906E-8B7DEE20C7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D82F360-37FA-4E80-906E-8B7DEE20C7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D82F360-37FA-4E80-906E-8B7DEE20C7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{196E8868-4308-445C-BB2D-AD10BE48E627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{196E8868-4308-445C-BB2D-AD10BE48E627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{196E8868-4308-445C-BB2D-AD10BE48E627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{196E8868-4308-445C-BB2D-AD10BE48E627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8303F7-0AE8-4BE3-9BAF-08008220FC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8303F7-0AE8-4BE3-9BAF-08008220FC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8303F7-0AE8-4BE3-9BAF-08008220FC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8303F7-0AE8-4BE3-9BAF-08008220FC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB2310F-5829-4929-814C-3C00ACD1DF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB2310F-5829-4929-814C-3C00ACD1DF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB2310F-5829-4929-814C-3C00ACD1DF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB2310F-5829-4929-814C-3C00ACD1DF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27574E19-9428-4ADA-8767-4A70C36C2FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27574E19-9428-4ADA-8767-4A70C36C2FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27574E19-9428-4ADA-8767-4A70C36C2FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27574E19-9428-4ADA-8767-4A70C36C2FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D82F360-37FA-4E80-906E-8B7DEE20C7DD} = {46E3AF85-1945-4932-A619-58FDC2306A53}
+		{196E8868-4308-445C-BB2D-AD10BE48E627} = {0AAC55E9-7BF9-4D2C-BEBB-EBF964F3CE63}
+		{27574E19-9428-4ADA-8767-4A70C36C2FC2} = {B0C66BA0-0C37-470E-BAF3-1EFDC6889F0C}
+		{2A8303F7-0AE8-4BE3-9BAF-08008220FC12} = {6A8A0DD2-A4C0-4F10-BE9D-821733250B93}
+		{DDB2310F-5829-4929-814C-3C00ACD1DF3D} = {38735864-5C33-4114-A907-F3BA8BFBCFAF}
+		{22E2423F-060A-4ECB-A8D2-474FCC8A6B22} = {A8EC6A35-CB30-4448-9160-D78B70218599}
+	EndGlobalSection
+EndGlobal

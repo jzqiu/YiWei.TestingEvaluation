@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title-一苇青少年成长研究中心</title>
+    <meta charset="UTF-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link href="@Url.Content("~/styles/base.css?v=5")" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <script src="@Url.Content("~/Scripts/zepto.min.js")"></script>
+    <script src="@Url.Content("~/scripts/slide.1.0.js")"></script>
+    @*<script src="@Url.Content("~/scripts/jquery.cookie.js")"></script>*@
+    <script>
+        @*if ($(".user_layer").length > 0) {
+            $(".user_img").attr("src", $.cookie("Hot371.Cookie.HeadImg"));
+            $(".user_name").text('@ViewBag.NikeName');
+        }
+        document.querySelector(".footer_top").addEventListener("click", function () { window.scrollTo(0, 0); }, false);
+        document.querySelector(".footer_home").addEventListener("click", function () { location.href='@Url.Action("Index", "Home")'; }, false);*@
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
