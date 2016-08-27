@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<input type="button" value="1111111111111111111111111111111" onclick="callpay();"/>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function onBridgeReady() {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest', 
+                {"appId":"wx9930b34a6ce0dd45","nonceStr":"ca08f2dc88b84e0f9e15c4733f296f1a","package":"prepay_id=wx201608271718006e177d06320216133782","paySign":"D584A5414F3F9FDA34E645A2E85161EA","signType":"MD5","timeStamp":"1472289331"},
+                function(res) {
+                    if (res.err_msg == "get_brand_wcpay_request：ok") {
+                        window.location.href = "http://ceping.yiiway.com/test/";
+                    } else if (res.err_msg == "get_brand_wcpay_request:cancel") {
+                        alert("用户取消支付!");
+                    } else {
+                        alert(res.err_msg);
+                        alert("支付失败，您可以联系我们!");
+                    }
+                }
+            );
+        }
+
+        function callpay() {
+            if (typeof WeixinJSBridge == "undefined") {
+                alert(1111111);
+                if (document.addEventListener) {
+                    alert(222222);
+                    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+                } else if (document.attachEvent) {
+                    alert(333333);
+                    document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                    document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+                }
+            } else {
+                alert(44444);
+                onBridgeReady();
+            }
+        }
+    </script>
+}

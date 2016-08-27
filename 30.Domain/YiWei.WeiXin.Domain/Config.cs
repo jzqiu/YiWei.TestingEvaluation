@@ -24,7 +24,7 @@
         /// <summary>
         /// 微信支付,异步通知url
         /// </summary>
-        public const string WxNotifyUrl = "";
+        public const string WxNotifyUrl = "http://ceping.yiiway.com/test/pay/wxnotify";
 
         public const string WeixinToken = "";
     }

@@ -14,9 +14,11 @@ namespace YiWei.WeiXin.Domain.WXPay
         * @throws WxPayException
         * @return 成功时返回订单查询结果，其他抛异常
         */
-        public static WxPayData OrderQuery(WxPayData inputObj)
+        public static WxPayData OrderQuery(string transactionId)
         {
             string url = "https://api.mch.weixin.qq.com/pay/orderquery";
+            var inputObj = new WxPayData();
+            inputObj.SetValue("transaction_id", transactionId);
             //检测必填参数
             if (!inputObj.IsSet("out_trade_no") && !inputObj.IsSet("transaction_id"))
             {

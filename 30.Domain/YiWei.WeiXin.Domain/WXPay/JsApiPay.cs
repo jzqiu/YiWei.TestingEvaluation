@@ -14,7 +14,7 @@ namespace YiWei.WeiXin.Domain.WXPay
             data.SetValue("total_fee", totalFee);
             data.SetValue("time_start", DateTime.Now.ToString("yyyyMMddHHmmss"));
             data.SetValue("time_expire", DateTime.Now.AddMinutes(10).ToString("yyyyMMddHHmmss"));
-            data.SetValue("goods_tag", productCode);//--
+            data.SetValue("goods_tag", productCode);
             data.SetValue("trade_type", "JSAPI");
             data.SetValue("openid", openId);
 

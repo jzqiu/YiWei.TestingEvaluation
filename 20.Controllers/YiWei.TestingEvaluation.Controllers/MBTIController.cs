@@ -25,7 +25,9 @@ namespace YiWei.TestingEvaluation.Controllers
 
         public ActionResult Testing(int tid)
         {
-            return View();
+            IEnumerable<MBTIQuestion> list = _service.GetQuestion(tid);
+            return Json(list, JsonRequestBehavior.AllowGet);
+            //return View();
         }
 
         [HttpPost]

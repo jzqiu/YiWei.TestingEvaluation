@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Script.Serialization;
 using System.Xml;
 using YiWei.Utility;
 
@@ -163,7 +164,7 @@ namespace YiWei.WeiXin.Domain.WXPay
         */
         public string ToJson()
         {
-            string jsonStr = SerializeHelper.JsonSerialize(m_values);
+            string jsonStr = new JavaScriptSerializer().Serialize(m_values);//SerializeHelper.JsonSerialize(m_values);
             return jsonStr;
         }
 

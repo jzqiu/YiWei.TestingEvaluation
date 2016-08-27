@@ -18,7 +18,7 @@ namespace YiWei.TestingEvaluation.Data
     /// </summary>
     public class DBHelper
     {
-        private static readonly ConnectionStringSettings Connection = ConfigurationManager.ConnectionStrings["TCWirelessWeiXin"];
+        private static readonly ConnectionStringSettings Connection = ConfigurationManager.ConnectionStrings["CePing"];
         private static readonly string ConnectionString = Connection.ConnectionString;
 
         public static SqlConnection GetOpenConnection()
