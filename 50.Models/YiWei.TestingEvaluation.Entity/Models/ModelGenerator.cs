@@ -157,4 +157,17 @@ namespace YiWei.TestingEvaluation.Entity.TT
 		public virtual int? TestingType { get; set; }
 	}
 
+    /// <summary>
+    /// A class which represents the SysAccessToken table.
+    /// </summary>
+	[Table("SysAccessToken")]
+	public partial class SysAccessToken
+	{
+		[Key]
+		public virtual int TId { get; set; }
+		public virtual string access_token { get; set; }
+		public virtual int expires_in { get; set; }
+		public virtual DateTime LastTime { get; set; }
+	}
+
 }

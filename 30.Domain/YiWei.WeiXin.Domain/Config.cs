@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace YiWei.TestingEvaluation.Domain
+﻿namespace YiWei.WeiXin.Domain
 {
     public static class Config
     {
@@ -31,5 +25,7 @@ namespace YiWei.TestingEvaluation.Domain
         /// 微信支付,异步通知url
         /// </summary>
         public const string WxNotifyUrl = "";
+
+        public const string WeixinToken = "";
     }
 }

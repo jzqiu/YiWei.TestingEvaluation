@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
-using Newtonsoft.Json;
+using YiWei.Utility;
 
-namespace YiWei.TestingEvaluation.Domain.WXPay
+namespace YiWei.WeiXin.Domain.WXPay
 {
     /// <summary>
     /// 微信支付协议接口数据类，所有的API接口通信都依赖这个数据结构，
@@ -166,7 +163,7 @@ namespace YiWei.TestingEvaluation.Domain.WXPay
         */
         public string ToJson()
         {
-            string jsonStr = JsonConvert.SerializeObject(m_values);
+            string jsonStr = SerializeHelper.JsonSerialize(m_values);
             return jsonStr;
         }
 

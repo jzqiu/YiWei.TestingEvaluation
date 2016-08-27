@@ -175,6 +175,10 @@
       <Project>{27574e19-9428-4ada-8767-4a70c36c2fc2}</Project>
       <Name>YiWei.TestingEvaluation.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\30.Domain\YiWei.WeiXin.Domain\YiWei.WeiXin.Domain.csproj">
+      <Project>{5d08f69e-eb32-442f-b142-2196637f660c}</Project>
+      <Name>YiWei.WeiXin.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\40.Data\YiWei.TestingEvaluation.Data\YiWei.TestingEvaluation.Data.csproj">
       <Project>{2a8303f7-0ae8-4be3-9baf-08008220fc12}</Project>
       <Name>YiWei.TestingEvaluation.Data</Name>

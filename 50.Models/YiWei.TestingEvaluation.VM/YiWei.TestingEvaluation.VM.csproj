@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27574E19-9428-4ADA-8767-4A70C36C2FC2}</ProjectGuid>
+    <ProjectGuid>{B321A03B-4514-481D-A31F-1C2A9B190460}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YiWei.TestingEvaluation.Domain</RootNamespace>
-    <AssemblyName>YiWei.TestingEvaluation.Domain</AssemblyName>
+    <RootNamespace>YiWei.TestingEvaluation.VM</RootNamespace>
+    <AssemblyName>YiWei.TestingEvaluation.VM</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,20 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Autofac.3.1.0\lib\net40\Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Autofac.Integration.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,25 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MBTITesingService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\40.Data\YiWei.TestingEvaluation.Data\YiWei.TestingEvaluation.Data.csproj">
-      <Project>{2a8303f7-0ae8-4be3-9baf-08008220fc12}</Project>
-      <Name>YiWei.TestingEvaluation.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\50.Models\YiWei.TestingEvaluation.Entity\YiWei.TestingEvaluation.Entity.csproj">
-      <Project>{DDB2310F-5829-4929-814C-3C00ACD1DF3D}</Project>
-      <Name>YiWei.TestingEvaluation.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\60.Infrastructure\YiWei.Utility\YiWei.Utility.csproj">
-      <Project>{22E2423F-060A-4ECB-A8D2-474FCC8A6B22}</Project>
-      <Name>YiWei.Utility</Name>
-    </ProjectReference>
+    <Compile Include="WeiXin\WeiXinMsg.cs" />
+    <Compile Include="WeiXin\WeiXinUser.cs" />
+    <Compile Include="WeiXin\WeiXinUserToken.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

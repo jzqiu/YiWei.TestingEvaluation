@@ -23,6 +23,9 @@ namespace YiWei.TestingEvaluation.H5Site
             var service = Assembly.Load("YiWei.TestingEvaluation.Domain");
             builder.RegisterAssemblyTypes(service, service)
               .AsSelf();
+            var weixin = Assembly.Load("YiWei.WeiXin.Domain");
+            builder.RegisterAssemblyTypes(weixin, weixin)
+              .AsSelf();
             builder.RegisterControllers(Assembly.Load("YiWei.TestingEvaluation.Controllers"));
             //容器
             var container = builder.Build();
