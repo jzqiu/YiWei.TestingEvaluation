@@ -49,5 +49,15 @@ namespace YiWei.TestingEvaluation.Data
                 return list;
             }
         }
+
+        public IEnumerable<MBTIReportText> QueryReportText(string typeCode)
+        {
+            using (_connection = DBHelper.GetOpenConnection())
+            {
+                IEnumerable<MBTIReportText> list = _connection.GetList<MBTIReportText>(new {TypeCode = typeCode});
+
+                return list;
+            }
+        }
     }
 }

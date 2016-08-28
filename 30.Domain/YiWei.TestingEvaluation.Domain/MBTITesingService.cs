@@ -44,5 +44,16 @@ namespace YiWei.TestingEvaluation.Domain
 
             return new MBTIReport();
         }
+
+        public MBTIReportText GetReportText(string typeCode)
+        {
+            IEnumerable<MBTIReportText> list = _data.QueryReportText(typeCode);
+            if (list != null && list.Any())
+            {
+                return list.First();
+            }
+
+            return new MBTIReportText();
+        }
     }
 }

@@ -85,6 +85,7 @@ input[type="button"] { -webkit-appearance: none; outline: none; }
 .mt10 { margin-top: 10px; }
 .mt15 { margin-top: 15px; }
 .mt20 { margin-top: 20px; }
+.mt60 { margin-top: 60px; }
 .mb5 { margin-bottom: 5px; }
 .mb8 { margin-bottom: 8px; }
 .mb10 { margin-bottom: 10px; }

@@ -1,13 +1,67 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "去付款";
 }
 
-<h2>Index</h2>
-<input type="button" value="1111111111111111111111111111111" onclick="callpay();"/>
+@section styles
+{
+    <style type="text/css">
+        .page ul{background:#fff; margin: 0; padding: 0; }
+        .page ul li{ position: relative;padding:5px 0;line-height:36px;border-top: 1px solid #DDD;overflow:hidden;}
+        .page ul li .left{width:30%;float:left;text-align:center;}
+        .page ul li .right{width:70%;float:left;}
+        .mzsm .txt{color:#2f2f2f;font: 400 12px/14px Geneva, 宋体, Tahoma, sans-serif;}
+        .mzsm i{font-size:16px;margin-right:2px;color:#4C9AF2}
+        .txt{color:#bbb;font-size:1.4rem;}
+        .pay-box{width:100%;height:auto;line-height:1.3em;}
+        .pay-box:before,.pay-box:after{content:" ";display:table}
+        .pay-box:after{clear:both;}
+        .pay-box .l{width:30%;float:left;text-align:center;}
+        .pay-box .l img{width:45px;height:45px;}
+        .pay-box .c{width:56%;float:left;}
+        .pay-box .c .txt{color:#bbb;font-size:1.4rem;}
+        .pay-box .r{width:14%;float:right;padding-right:10px;}
+        .pay-box .payselect {margin-top:.5rem;height:28px;width:28px; border:1px solid #dcdcdc;position:relative;border-radius:3px;}
+        .pay-box .payselect img{width:30px;position:absolute;top:-5px;left:0}
+        .pay-box .payselect img .hide{display:none;}
+        .btn-green { text-align: center; background: #14ae67; color: #fff; border: none; height: 40px; padding: 0 10px; line-height: 40px; cursor: pointer; min-width: 120px; font-size: 16px; display: inline-block; overflow: visible; border-radius: 3px; width: 98%; }
+        .cp-warn { margin: 5px 15px; }
+        .warn-title { color: #e84c33; font-size: 16px; font-weight: bold; margin-bottom: 5px; }
+        .warn-content { font-size: 14px; line-height: 1.75em; }
+        .warn-content b { color: #e84c33;font-weight:bold; }
+    </style>
+}
+
+    <div class="page">
+       <ul>
+         <li>
+            <div class="left">测评名称：</div>
+            <div class="right">
+                 性格类型测评（青少年自评版）
+            </div>
+        </li>
+        <li>
+            <div class="left">付费金额：</div>
+            <div class="right">
+               <span style="color: #e84c33;font-size: 1.8rem;">￥9.9元</span>
+            </div>
+        </li>
+        <li>
+            <div class="tc mt60"><input type="button" class="btn-green btn-green-big" value="马上支付" onclick="callpay();"></div>
+            <div class="cp-warn">
+                <div class="warn-title">温馨提示：</div>
+                <div class="warn-content">
+                    <p>1. 该款项仅供当次测评。</p>
+                    <p>2. 未完成的测评，可至“我的测评”查找重做。</p>
+                    <p>3. 报告的结果是基于你测试的原始数据结果得出，其准确性由你的测试数据本身决定。</p>
+                </div>
+            </div>
+        </li>
+        </ul>
+    </div>
 
 @section scripts
 {
-    <script type="text/javascript">
+    @*<script type="text/javascript">
         function onBridgeReady() {
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest', 
@@ -42,5 +96,5 @@
                 onBridgeReady();
             }
         }
-    </script>
+    </script>*@
 }

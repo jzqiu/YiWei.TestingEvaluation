@@ -5,7 +5,7 @@
 // 
 //     Connection String Name: `CePing`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `Data Source=192.168.217.129;Initial Catalog=CePing;User ID=sa;Password=******;`
+//     Connection String:      `Data Source=.;Initial Catalog=CePing;User ID=sa;Password=******;`
 //     Include Views:          `True`
 
 using System;
@@ -15,6 +15,29 @@ using System.Collections.Generic;
 
 namespace YiWei.TestingEvaluation.Entity.TT
 {
+    /// <summary>
+    /// A class which represents the Member table.
+    /// </summary>
+	[Table("Member")]
+	public partial class Member
+	{
+		[Key]
+		public virtual string OpenId { get; set; }
+		public virtual string NikeName { get; set; }
+		public virtual string HeadUrl { get; set; }
+		public virtual int? Sex { get; set; }
+		public virtual int? Subscribe { get; set; }
+		public virtual DateTime? SubscribeTime { get; set; }
+		public virtual string Name { get; set; }
+		public virtual DateTime? Birthdate { get; set; }
+		public virtual string Mobile { get; set; }
+		public virtual int? ProvinceId { get; set; }
+		public virtual int? CityId { get; set; }
+		public virtual int? DistrictId { get; set; }
+		public virtual int? MemberType { get; set; }
+		public virtual DateTime? CreateDate { get; set; }
+	}
+
     /// <summary>
     /// A class which represents the MBTI_ReportText table.
     /// </summary>
@@ -31,6 +54,22 @@ namespace YiWei.TestingEvaluation.Entity.TT
 		public virtual string TypicalCharactersImg { get; set; }
 		public virtual string Positive { get; set; }
 		public virtual string Negative { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the MBTI_Question table.
+    /// </summary>
+	[Table("MBTI_Question")]
+	public partial class MBTIQuestion
+	{
+		[Key]
+		public virtual int Id { get; set; }
+		public virtual string Question { get; set; }
+		public virtual string AOption { get; set; }
+		public virtual string AAnswer { get; set; }
+		public virtual string BOption { get; set; }
+		public virtual string BAnswer { get; set; }
+		public virtual int? TesingId { get; set; }
 	}
 
     /// <summary>
@@ -61,8 +100,9 @@ namespace YiWei.TestingEvaluation.Entity.TT
 	public partial class OrderInfo
 	{
 		[Key]
-		public virtual string OrderNumber { get; set; }
+		public virtual string OrderNo { get; set; }
 		public virtual string OpenId { get; set; }
+		public virtual string ProductCode { get; set; }
 		public virtual string ProductName { get; set; }
 		public virtual decimal? OriginalPrice { get; set; }
 		public virtual decimal? DiscountPrice { get; set; }
@@ -78,58 +118,22 @@ namespace YiWei.TestingEvaluation.Entity.TT
 	}
 
     /// <summary>
-    /// A class which represents the Member table.
+    /// A class which represents the MemberChildren table.
     /// </summary>
-	[Table("Member")]
-	public partial class Member
+	[Table("MemberChildren")]
+	public partial class MemberChildren
 	{
 		[Key]
-		public virtual string OpenId { get; set; }
-		public virtual string NikeName { get; set; }
-		public virtual string HeadUrl { get; set; }
-		public virtual int? Sex { get; set; }
-		public virtual int? Subscribe { get; set; }
-		public virtual DateTime? SubscribeTime { get; set; }
-		public virtual string Name { get; set; }
+		public virtual int Id { get; set; }
+		public virtual string BelongToOpenId { get; set; }
+		public virtual string ChildrenName { get; set; }
 		public virtual int? ChildrenSex { get; set; }
 		public virtual DateTime? Birthdate { get; set; }
-		public virtual string Mobile { get; set; }
-		public virtual int? ProvinceId { get; set; }
-		public virtual int? CityId { get; set; }
-		public virtual int? DistrictId { get; set; }
 		public virtual int? GaokaoProvince { get; set; }
 		public virtual string Grade { get; set; }
 		public virtual int? EnterSchoolYear { get; set; }
 		public virtual string SchoolName { get; set; }
-		public virtual int? MemberType { get; set; }
-		public virtual DateTime? BeginDate { get; set; }
-		public virtual DateTime? EndDate { get; set; }
-		public virtual int? ShoppingAmount { get; set; }
-		public virtual int? HaveInputScoreCount { get; set; }
-		public virtual int? UsedInputScoreCount { get; set; }
-		public virtual int? IsConfirm { get; set; }
-		public virtual int? IsConfirmInfor { get; set; }
-		public virtual string LastCardNumber { get; set; }
-		public virtual int? BelongTo { get; set; }
-		public virtual string BelongToOpenId { get; set; }
-		public virtual int? BelongToType { get; set; }
 		public virtual DateTime? CreateDate { get; set; }
-	}
-
-    /// <summary>
-    /// A class which represents the MBTI_Question table.
-    /// </summary>
-	[Table("MBTI_Question")]
-	public partial class MBTIQuestion
-	{
-		[Key]
-		public virtual int Id { get; set; }
-		public virtual string Question { get; set; }
-		public virtual string AOption { get; set; }
-		public virtual string AAnswer { get; set; }
-		public virtual string BOption { get; set; }
-		public virtual string BAnswer { get; set; }
-		public virtual int? TesingId { get; set; }
 	}
 
     /// <summary>
@@ -150,11 +154,9 @@ namespace YiWei.TestingEvaluation.Entity.TT
 		public virtual int? J { get; set; }
 		public virtual int? P { get; set; }
 		public virtual string TypeCode { get; set; }
-		public virtual DateTime CreateDate { get; set; }
-		public virtual string ProReportCode { get; set; }
-		public virtual DateTime? ProReportDate { get; set; }
-		public virtual string ProReportRemark { get; set; }
 		public virtual int? TestingType { get; set; }
+		public virtual string OrderNo { get; set; }
+		public virtual DateTime CreateDate { get; set; }
 	}
 
     /// <summary>

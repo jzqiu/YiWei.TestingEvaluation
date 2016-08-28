@@ -23,17 +23,17 @@ namespace YiWei.TestingEvaluation.Controllers
             return View();
         }
 
-        [HttpPost]
-        public JsonResult HadTest(int tid)
-        {
-            MBTIReport report = _service.HadTest(OpenId, tid);
-            if (report.Id > 0)
-            {
-                report.ProReportRemark = report.CreateDate.ToString("yyyy年MM月dd日 HH时mm分");
-            }
+        //[HttpPost]
+        //public JsonResult HadTest(int tid)
+        //{
+        //    MBTIReport report = _service.HadTest(OpenId, tid);
+        //    //if (report.Id > 0)
+        //    //{
+        //    //    report.ProReportRemark = report.CreateDate.ToString("yyyy年MM月dd日 HH时mm分");
+        //    //}
 
-            return Json(report);
-        }
+        //    return Json(report);
+        //}
 
         public ActionResult Testing(int tid)
         {
