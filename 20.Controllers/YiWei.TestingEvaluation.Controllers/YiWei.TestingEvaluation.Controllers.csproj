@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BaseController.cs" />
     <Compile Include="HomeController.cs" />
+    <Compile Include="JoinInController.cs" />
     <Compile Include="MBTIController.cs" />
     <Compile Include="MyController.cs" />
     <Compile Include="PayController.cs" />

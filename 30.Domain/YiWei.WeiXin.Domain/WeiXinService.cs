@@ -68,7 +68,7 @@ namespace YiWei.WeiXin.Domain
         /// 根据当前时间 判断Access_Token 是否超期  如果超期返回新的Access_Token   否则返回之前的Access_Token 
         /// </summary>
         /// <returns></returns>
-        public string GetExistAccessToken()
+        public static string GetExistAccessToken()
         {
             string token = string.Empty;
             var respository = new AccessTokenData();
@@ -154,14 +154,14 @@ namespace YiWei.WeiXin.Domain
         #endregion
 
         #region 发送消息
-        public void SendMsg(WeiXinMsg msg)
+        public static void SendMsg(WeiXinMsg msg)
         {
             string token = GetExistAccessToken();
             string url = AuthorizeUrl.GetMsgSendUrl(token);
             var result = NetHelper.HttpPost(url, msg, SerializationType.Json);
         }
 
-        public void SendTemplateMsg(object msg)
+        public static void SendTemplateMsg(object msg)
         {
             string token = GetExistAccessToken();
             string url = AuthorizeUrl.GetTemplateSendUrl(token);

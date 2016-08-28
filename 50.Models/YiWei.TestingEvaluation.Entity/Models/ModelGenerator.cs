@@ -150,7 +150,7 @@ namespace YiWei.TestingEvaluation.Entity.TT
 		public virtual int? J { get; set; }
 		public virtual int? P { get; set; }
 		public virtual string TypeCode { get; set; }
-		public virtual DateTime? CreateDate { get; set; }
+		public virtual DateTime CreateDate { get; set; }
 		public virtual string ProReportCode { get; set; }
 		public virtual DateTime? ProReportDate { get; set; }
 		public virtual string ProReportRemark { get; set; }

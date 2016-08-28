@@ -60,10 +60,6 @@ namespace YiWei.TestingEvaluation.Controllers
             return result.ToXml();
         }
 
-        private string GenerateOutTradeNo()
-        {
-            var ran = new Random();
-            return string.Format("{0}{1}", DateTime.Now.ToString("yyyyMMddHHmmssfff"), ran.Next(999));
-        }
+        
     }
 }

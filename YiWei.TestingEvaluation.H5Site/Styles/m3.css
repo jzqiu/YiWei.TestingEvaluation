@@ -1,0 +1,167 @@
+body{font-family:"Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;background:#eee;font-size:16px}
+h1,h2,h3,h4,h5,h6,li,ul{padding:0;margin:0;list-style-type:none}
+/**a{color:#333}
+a:hover{color:#e84c33;text-decoration:none}
+**/
+.search{position:relative;padding:10px;overflow:hidden}
+.search input[type=text],.search input[type=number]{padding:0;width:100%;height:40px;line-height:40px;border-radius:5px!important;border:1px solid #14ae67;text-indent:10px;padding-right:50px; color:#333;font-size:16px;float:left}
+.search i{position:absolute;top:20px;right:20px;color:#14ae67;font-size:24px;}
+
+.section{width:100%;height:auto;background:#fff;padding:10px 0 0;border-top:1px solid #dedfe0;border-bottom:1px solid #dedfe0;margin-top:0}
+.section:after,.section:before{content:" ";display:table}
+.section:after{clear:both}
+.section h3{font-size:18px;color:#e84c33;margin-bottom:10px;font-weight:700;padding:0 10px}
+.section h3 a{display:inline-block;float:right;font-size:22px;color:#8d8d8d;line-height:25px;font-weight:400;width:60px;height:40px;text-align:right}
+.section h3 span{float:right;color:#666;font-weight:400;font-size:14px;}
+.section h3 label{font-size:14px;color: #E84C33;}
+
+.section .search-item{border:1px solid #dedfe0;border-bottom:0;border-left:0;text-align:center;padding:10px 0}
+.section .search-item:first-child{border-left:0;}
+.section .search-item:last-child{border-right:0;}
+.section .search-item a{display:block}
+.section .search-item a:hover{text-decoration:none}
+.section .search-item div{font-size:14px;margin-top:5px;color:#333}
+.section .search-item img{width:50%;}
+
+.bechoose{padding:10px 10px 0px 10px;}
+.bechoose span{padding:2px 5px; background:#14ae67;color:#fff;font-size:14px;margin-right:5px;}
+.bechoose i{margin-left:5px;}
+
+.CollegeList{border-top:1px solid #dedfe0;}
+.CollegeList .schoolbadge{position: relative;background:#fff;width:16%;float:left;padding-left:5px;}
+.CollegeList .schoolbadge img{width:85%}
+.CollegeList .hot{color:#e84c33;font-size:22px;}
+.CollegeList .tag label{margin-right:5px;font-size:22px;font-weight:400!important}
+
+.CollegeList .list{border-bottom:1px solid #dedfe0;height:auto;overflow:hidden;padding-bottom:10px; padding-top:10px;}
+.CollegeList .list:before,.CollegeList .row.list:after{content:" ";display:table}
+.CollegeList .list:after{clear:both}
+
+.CollegeList .list .info{position: relative;width: 68%!important;height:100%;float:left;}
+.CollegeList .list .info .top{border-bottom:1px dashed #adadad;overflow:hidden;padding-bottom:1px}
+.CollegeList .list .info .top .name{font-size:16px;color:#333;float:left;font-weight:700}
+.CollegeList .list .info .top .tag{float:right;font-size:10px;}
+.CollegeList .list .info .top .tag span{font-weight:400;font-size:11px;margin-right:0px;margin-left:5px;}
+.CollegeList .list .info .bottom{padding-top:5px;overflow:hidden;}
+.CollegeList .list .info .bottom .college-xs-btn{padding:2px 5px;float:left;font-size:11px;margin-top:5px}
+.CollegeList .list .info .bottom .hot{color:#e84c33;font-size:14px}
+.CollegeList .list .info .bottom .follow{color:#666;font-size:14px}
+.CollegeList .list .info .bottom .follow i{color:#e90157;font-size:20px}
+.CollegeList .list .info .bottom .follow i.fa-star-o{color:#666;}
+.CollegeList .list .luqugailv{position: relative;width:16%;text-align:center;font-size:12px;float:left;}
+.CollegeList .list .luqugailv a{color:#2489ce;}
+.CollegeList .list .luqugailv img{ border-radius:50%;width:35px;}
+.zyList{padding: 0 5px 0 5px;}
+.zyList .list{border-top:1px solid #dedfe0;height:auto;overflow:hidden;padding-bottom:5px; padding-top:5px;}
+.zyList .list:before,.zyList .row.list:after{content:" ";display:table}
+.zyList .list:after{clear:both}
+.zyList .list .name{font-size:16px;color:#333;float:left;font-weight:700;margin-top:3px;}
+.zyList .list .follow{color:#666;font-size:14px}
+.zyList .list .follow i{color:#e90157;font-size:20px}
+.zyList .list .follow i.fa-star-o{color:#666;}
+.zyList .list:last-child{border-bottom:1px solid #dedfe0;}
+.zyList .list .btn{  padding: 4px 6px;}
+
+.page-list-loading{width:96%;margin:10px auto;color:#fff}
+.page-list-loading .btn{border:0;width:100%;font-size:16px}
+.page-list-loading .btn-danger{background:#e84c33}
+.page-list-loading .btn-default{background:#cbcbcb}
+
+.tabs .nav-tabs{background:#fff;width:100%;}
+.tabs .tab2 li{width:50%;}
+.tabs .tab3 li{width:33.33333333333333%;}
+.tabs .tab4 li{width:25%;}
+.tabs .nav-tabs>li>a{border-radius:0;border:none;text-align:center;color:#333;padding:10px 0; font-size:16px}
+.tabs .nav-tabs>li.active>a{border:none;border-bottom:2px solid #14ae67;color:#14ae67}
+
+.mod_tab{display:box;display:-webkit-box;display:flex;display:-webkit-flex;height:40px;padding:5px 5px;position:relative;background-color:#eee}
+.mod_tab .mod_tab_item{display:block;flex:1;-webkit-flex:1;box-flex:1;-webkit-box-flex:1;text-align:center;background-color:#fff;color:#333;font-size:12px;border-radius:20px;line-height:30px;height:30px;margin:0 5px;}
+.mod_tab .mod_tab_item.cur{background-color:#e4393c;color:#fff}
+.mod_tab .mod_tab_item a{position: relative;display: block;color:#fff}
+
+
+.majorList{border-top:1px solid #dedfe0;border-bottom:1px solid #dedfe0;overflow:hidden;margin-left:0;}
+.majorList .left{background:#edeef0;overflow-y:scroll;width:40%;float:left;}
+.majorList .left li{border-bottom:1px solid #dedfe0;border-right:1px solid #dedfe0;padding:5px 0;text-align:center;color:#000;font-size:14px}
+.majorList .left li.active{border-right:1px solid #fff;color:#e84c33;background:#fff}
+.majorList .right{padding:0 0 0 10px;background:#fff;overflow-y:scroll;width:60%;float:left;}
+.majorList .right .majors{display:none}
+.majorList .right .majors li a.majorClassify{display:block;padding:5px 5px;font-weight:700;color:#000;font-size:14px;border-bottom:1px solid #dedfe0}
+.majorList .right .majors li a.majorClassify:hover{text-decoration:none}
+.majorList .right .majors li a.majorClassify i{float:right;margin-right:5px;margin-top:2px}
+.majorList .right .majors .majorName li a{display:block;padding:5px 5px;border-bottom:1px dashed #dedfe0;font-size:14px;color:#898989}
+.majorList .right .majors .majorName li a:hover{text-decoration:none}
+.tree,.tree ul,.tree li{list-style:none;margin:0;padding:0;zoom:1}
+.tree li a.tree-parent{color:#e84c33!important}
+.tree li a.tree-parent-collapsed{color:#000!important}
+.tree li a:hover,.tree li a.tree-parent:hover,.tree li a:focus,.tree li a.tree-parent:focus,.tree li a.tree-item-active{color:#e84c33}
+.tree li a:focus,.tree li a.tree-parent:focus,.tree li a.tree-item-active{color:#e84c33}
+.tree ul.tree-group-collapsed{display:none}
+.searchPanel{display: block;padding: 10px;margin-top:10px;font-size: 14px;line-height: 18px;word-break: break-all;word-wrap: break-word;color: #333;background-color: #f5f5f5;border: 1px solid #ccc;border-radius: 4px;}
+.searchPanel i{ text-indent:0;padding-left:5px;}
+.major_base_info{font-size:14px;color:#818181;margin-top:0;padding:5px 5px 10px 0;}
+.major_base_info .bl{padding:10px 10px 20px 0;}
+.major_base_info .bl .col-xs-6{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.major_base_info .name{font-size:18px;color:#000;font-weight:700;}
+.major_base_info span{color:#000}
+.section.Description{padding:10px 0;margin-bottom:10px;}
+.section.Description .salary{display:inline-block;float:right;font-size:10px;color:#8d8d8d;font-weight:400;margin-top:5px;}
+.section.Description .salary em{font-style:normal;color:#e84c33}
+.section.Description .content{padding:0 10px;font-size:16px;line-height:32px}
+
+.college-info{width:100%}
+.college-info .box{width:100%;height:auto;overflow:hidden;padding:10px;background:#fff;border-top:1px solid #dedfe0;border-bottom:1px solid #dedfe0}
+.college-info .base-info{font-size:18px;overflow:hidden}
+.college-info .base-info .mark{background:#fff;width:25%; float:left;}
+.college-info .base-info .mark img{border:1px solid #b2b2b2;padding:5px}
+.college-info .base-info .college-name{width:75%;float:left;}
+.college-info .base-info .college-name h4{font-size:20px;color:#333;}
+.college-info .base-info .college-name h5{color:#818181;font-size:16px;padding:5px 0;}
+.college-info .base-info .college-name h5 label{margin-right:5px;background:#e84c33;}
+.college-info .base-info .list .college-name h4{font-size:16px;color:#333;}
+.college-info .base-info .list .college-name h5{color:#818181;font-size:14px;padding:5px 0;}
+
+.college-info .college-ds{font-size:14px;color:#818181;}
+.college-info .college-ds span{color:#333;font-size:14px}
+.college-info .college-ds .l{width:50%;float:left;}
+.college-info hr {margin: 5px 0 10px;}
+.college-info .base-info .info-btn button{width:98%;margin-bottom:5px;font-size:18px;}
+.college-info .base-info .info-btn .l{width:50%;float:left;}
+.college-info .showmore { text-align: center; color: #2f2f2f; border-top: 1px solid #dadada;padding-top:5px; margin-top:10px;}
+.college-info .showmore span { display: inline-block; width: 6px; height: 6px; border-bottom: 1px solid #999; border-right: 1px solid #999; -webkit-transform: rotate(45deg); display: inline-block; margin-left: 10px; vertical-align: 3px; margin-left: 10px; }
+.college-info .showmore .active { -webkit-transform: rotate(225deg); vertical-align: 0; }
+.base-info .list {margin-bottom:10px;padding-bottom:10px;border-bottom: 1px dashed #dedfe0;}
+.reportFooter {padding: 15px;background-color: rgba(0,0,0,.5);position: fixed;width: 100%;bottom: 60px;left: 0;}
+
+.pagination{
+    padding:10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.pagination a {
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+    color: #469400 !important;
+}
+.pagination span.current {
+    background: #469400;
+    border-color: #459300 !important;
+    color: #fff !important;
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+ }
+				
+.pagination a:hover {
+    color: #c77405 !important;
+ }
+
+.pagination span.disabled {
+    border: 1px solid #ddd;
+    color: #ccc !important;
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+}
+
+.pagination span.allpg{color:#a4a4a4;display:inline-block;vertical-align:middle;margin-left:5px }

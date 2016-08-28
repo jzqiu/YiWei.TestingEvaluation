@@ -138,14 +138,26 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Global.asax" />
-    <Content Include="Images\mbtiicon.png" />
-    <Content Include="Images\ycasicon.png" />
-    <Content Include="Images\ysdsicon.png" />
+    <Content Include="Images\IconImg\MBTIIcon.png" />
+    <Content Include="Images\IconImg\MBTITitle.png" />
+    <Content Include="Images\IconImg\YCASIcon.png" />
+    <Content Include="Images\IconImg\YSDSIcon.png" />
+    <Content Include="Images\joinin.png" />
+    <Content Include="Images\right.png" />
     <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\dialog.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
     <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\myinfo.js" />
     <Content Include="Scripts\slide.1.0.js" />
     <Content Include="Scripts\zepto.min.js" />
     <Content Include="Styles\base.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\layout.css" />
+    <Content Include="Styles\m3.css" />
+    <Content Include="Styles\my.css" />
+    <Content Include="Styles\test.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -216,6 +228,8 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\ceping.pubxml" />
     <Content Include="Views\Pay\Index.cshtml" />
+    <Content Include="Styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Views\JoinIn\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

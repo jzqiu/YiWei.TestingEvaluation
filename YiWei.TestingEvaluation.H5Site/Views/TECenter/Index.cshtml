@@ -1,152 +1,65 @@
 ﻿@{
-    ViewBag.Title = "评测中心";
+    ViewBag.Title = "一苇青少年成长研究中心";
 }
 
 @section styles
 {
-    <style type="text/css">
-        html, body, div, p, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form,img,input, select, button, textarea, iframe, table, th, td { margin: 0; padding: 0; }
-        .cp-header{position:relative;width:100%;height:49px;line-height:49px;padding:0 10px;background: #0e716e;}
-.cp-header-fixed{position:fixed;top:0;left:0;right:0;width:100%;z-index:99;}
-.cp-header .cp-header-left{left:10px;}
-.cp-header .cp-header-right{right:10px;}
-.cp-header .cp-header-nav{position:absolute;top:0;color:#eee;}
-.cp-header .cp-header-nav img{height:16px;width:auto;vertical-align:middle;}
-.cp-header .cp-header-nav>a{display:inline-block;min-width:36px;text-align:center;color:#eee;}
-.cp-header .cp-header-nav>a+a{margin-left:5px;}
-    a { color:#2f2f2f; text-decoration:none; }
-    .f24 { font-size:24px; }
+    <style>
+        html { font-size: 62.5%; -webkit-tap-highlight-color: transparent }
+        a { color: #0e716e; }
+        h2 { background: #eee; font-size: 1.6rem; color: #888; padding: 1rem 1.5rem; border-bottom: 1px solid #dedede; }
+        .am-list { margin: 0 10px }
+        .am-list li:after { content: ""; display: table; clear: both; }
+        .am-list li { position: relative; padding: 1rem 0 1rem 0; border-bottom: 1px solid #dedede; }
+        .left { float: left; width: 25%; padding: 1px 1rem 0 0; }
+        .left img { width: 100%; display: block; }
+        .right { float: right; width: 75%; position: relative; }
+        .right p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .p1 { font-weight: bold; }
+        .p2,.p3 { margin-top: 5px; color: #999; font-size: 1.2rem; }
+        .start { float: right; color: #f37b1d; border-bottom: 1px solid #f37b1d; }
 
-    .cp-footer {position:fixed;left:0;bottom:0;width:100%;z-index:99;height: 45px;line-height: 45px;background:#F1F1F1;color: #333333;}
-.cp-footer ul{padding-left:0;margin:0;list-style:none;width:100%}
-.cp-footer a {color: #333333;font-size: 1.6rem;}
-.cp-footer .cp-footer-nav{padding-left:8px;padding-right:8px;text-align:center;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.cp-footer .cp-footer-nav{padding-left:0;padding-right: 0;}
-.cp-footer .cp-footer-nav li{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;float:none}
-.cp-footer-nav li{border-left:1px solid #dedede;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede}
-.cp-footer-nav li:first-child{border-left: 0}
-
-         html{font-size:62.5%;-webkit-tap-highlight-color:transparent}
-        body{position:relative;background:#fff;font-family:"Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;font-weight:400;line-height:1.6;color:#333;font-size:1.6rem}
-
-        a {color: #0e716e;}
-        .am-g{margin:0 auto;width:100%}
-        .am-g:before,.am-g:after{content:" ";display:table}
-        .am-g:after{clear:both}
-        .am-g .am-g{margin-left:-1rem;margin-right:-1rem;width:auto}
-        [class*=am-u-]{width:100%;padding-left:1rem;padding-right:1rem;float:left;position:relative}
-        [class*=am-u-]+[class*=am-u-]:last-child{float:right}
-        .am-u-sm-3{width:21%}
-        .am-u-sm-9{width:75%}
-        .am-list{padding-left:0}
-        .am-list>li{position:relative;display:block;margin-bottom:-1px;background-color:#fff;border:1px solid #dedede;border-width:1px 0; }
-        .am-list>li>a{display:block;padding:1rem 0}
-        .am-list>li:first-child{border-top: 0}
-        .am-list-item-hd{margin-top:0}
-        .am-cf:before,.am-cf:after{content:" ";display:table}
-        .am-cf:after{clear:both}
-        .am-list-news-hd{padding-top:1.2rem;padding-bottom:.8rem}
-        .am-list-news-hd a{display:block}
-        .am-list-news-hd h2{font-size:1.6rem;float:left;margin:0;height:2rem;line-height:2rem}
-        .am-list-news-hd h3{margin:0}
-        .am-list .am-list-item-desced a,.am-list .am-list-item-thumbed a{padding-right:0}
-        .am-list-news .am-list-item-hd{margin:0}
-        .am-list-date{position:absolute;right:5px;font-size:1.3rem;top:1.3rem}
-        .am-list-item-desced{padding-bottom:1rem}
-        .am-list-item-desced>a{padding:1rem 0}
-        .am-list-item-thumbed{padding-top:1em}
-        .am-list-big-title{background: #eee;font-size:1.6rem;color: #888;padding: 1rem 1.5rem ;display: inline-block;width: 100%;-webkit-box-sizing: border-box;border-bottom:1px solid #dedede;border-top:1px solid #dedede;}
-        .am-list-big-title:first-child{border-top: 0}
-        .am-list-news-default{margin: 0 10px}
-        .am-list-news-default .am-g{margin-left:auto;margin-right:auto}
-        .am-list-news-default .am-list-item-hd{font-weight:400;-webkit-box-flex:1;-webkit-flex:1;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-        .am-list-news-default .am-list>li{border-color:#dedede}
-        .am-list-news-default .am-list .am-list-item-desced{padding-top:1rem;padding-bottom:1rem}
-        .am-list-news-default .am-list .am-list-item-desced>a{padding:0}
-        .am-list-news-default .am-list .am-list-item-thumb-left .am-list-thumb{padding-left:0;padding-top: 1px;overflow: hidden;}
-        .am-list-news-default .am-list .am-list-item-desced .am-list-main{padding:0}
-        .am-list-news-default .am-list .am-list-item-desced .am-list-content{margin-top:5px;color: #999999;font-size: 1.2rem;-webkit-box-flex:1;-webkit-flex:1;width:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-        .am-list-news-default .am-list .am-list-item-thumb-right .am-list-thumb{padding-right:0}
-        .am-list-news-default .am-list .am-list-thumb img{width:100%;display:block;}
-        /**.am-list-news-default .am-list-item-thumb-left .am-list-thumb,.am-list-news-default .am-list-item-thumb-right .am-list-thumb{max-height:80px;overflow:hidden}**/
-
-        .cplist{background: #eee;}
-        .cplist div{clear:both;margin-bottom:5px;}
-        .cplist div:last-child{margin-bottom: 0}
     </style>
 }
 
-<header class="cp-header cp-header-fixed ">
-    <div class="cp-header-left cp-header-nav">
-        <a href="#">
-            <img src="http://ceping.yiiway.com/images/testlogo.jpg" style="height: 40px; margin-right: 5px; margin-bottom: 8px; border-radius: 50%;" alt="">一苇青少年成长测评中心</a>
-    </div>
-    <div class="cp-header-right cp-header-nav">
-        <a href="http://ceping.yiiway.com/my/Default.aspx"><i class="fa fa-user f24"></i></a>
-    </div>
-</header>
-
-<div>
-
-
-    <div class="am-list-big-title">学业规划</div>
-    <div class="am-list-news am-list-news-default">
-        <div class="am-list-news-bd">
-            <ul class="am-list">
-                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left"><a href="#">
-                    <div class="am-u-sm-3 am-list-thumb">
-                        <img src="~/Images/mbtiicon.png" alt="">
-                    </div>
-                    <div class="am-u-sm-9 am-list-main">
-                        <h3 class="am-list-item-hd">性格类型测评（青少年自评版）</h3>
-                        <div class="am-list-content">探索自我，从性格开始</div>
-                        <div class="am-list-content">
-                            <div style="width: 50%; float: left;">510231人已测</div>
-                            <div style="width: 50%; float: left; text-align: right;"><span style="color: #f37b1d; border-bottom: 1px solid #f37b1d;">开始测评</span></div>
-                        </div>
-                    </div>
-                </a></li>
-                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left"><a href="#">
-                    <div class="am-u-sm-3 am-list-thumb">
-                        <img src="~/Images/ysdsicon.png" alt="">
-                    </div>
-                    <div class="am-u-sm-9 am-list-main">
-                        <h3 class="am-list-item-hd">职业兴趣测评（青少年自评版）</h3>
-                        <div class="am-list-content">兴趣是人生最好的导师</div>
-                        <div class="am-list-content">
-                            <div style="width: 50%; float: left;">&nbsp;</div>
-                            <div style="width: 50%; float: left; text-align: right;"><span style="color: #f37b1d; border-bottom: 1px solid #f37b1d;">即将上线</span></div>
-                        </div>
-                    </div>
-                </a></li>
-                <li class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left"><a href="#">
-                    <div class="am-u-sm-3 am-list-thumb">
-                        <img src="~/Images/ycasicon.png" alt="">
-                    </div>
-                    <div class="am-u-sm-9 am-list-main">
-                        <h3 class="am-list-item-hd">职业价值观（青少年自评版）</h3>
-                        <div class="am-list-content">人生各有志，终不为此移</div>
-                        <div class="am-list-content">
-                            <div style="width: 50%; float: left;">&nbsp;</div>
-                            <div style="width: 50%; float: left; text-align: right;"><span style="color: #f37b1d; border-bottom: 1px solid #f37b1d;">即将上线</span></div>
-                        </div>
-                    </div>
-                </a></li>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-</div>
-
-<div class="cp-footer">
-    <ul class="cp-footer-nav">
-        <li><a href="http://ceping.yiiway.com/default.aspx">测评中心</a></li>
-        <li><a href="http://ceping.yiiway.com/joinin.aspx">我要加盟</a></li>
-        <li><a href="http://ceping.yiiway.com/my/default.aspx">我的测评</a></li>
+    <h2>学业规划</h2>
+    <ul class="am-list">
+        <li>
+            <a href="@Url.Action("Index", "MBTI", new{tid=10})">
+                <div class="left">
+                    <img src="@Url.Content("~/Images/IconImg/MBTIIcon.png")">
+                </div>
+                <div class="right">
+                    <p class="p1">性格类型测评（青少年自评版）</p>
+                    <p class="p2">探索自我，从性格开始</p>
+                    <p class="p3">510269人已测<span class="start">开始测评</span></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="left">
+                    <img src="@Url.Content("~/Images/IconImg/YSDSIcon.png")">
+                </div>
+                <div class="right">
+                    <p class="p1">职业兴趣测评（青少年自评版）</p>
+                    <p class="p2">兴趣是人生最好的导师</p>
+                    <p class="p3"><span class="start">即将上线</span></p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="left">
+                    <img src="@Url.Content("~/Images/IconImg/YCASIcon.png")">
+                </div>
+                <div class="right">
+                    <p class="p1">职业价值观（青少年自评版）</p>
+                    <p class="p2">人生各有志，终不为此移</p>
+                    <p class="p3"><span class="start">即将上线</span></p>
+                </div>
+            </a>
+        </li>
     </ul>
-</div>
+
+

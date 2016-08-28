@@ -1,23 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>@ViewBag.Title-一苇青少年成长研究中心</title>
+    <title>@ViewBag.Title</title>
     <meta charset="UTF-8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta content="telephone=no" name="format-detection" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <link href="@Url.Content("~/styles/base.css?v=5")" rel="stylesheet" />
+    <link href="@Url.Content("~/Styles/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Styles/test.css")" rel="stylesheet" type="text/css" />
     @RenderSection("styles", required: false)
 </head>
 <body>
-    <div class="content">
-        @RenderBody()
+    <!-- 头 -->
+    <header class="cp-header">
+        <a class="header_left" href="@Url.Action("Index", "TECenter")">
+            <img class="header_icon" src="http://ceping.yiiway.com/images/testlogo.jpg" />
+            一苇青少年成长研究中心
+        </a>
+        <a class="header_right" href="@Url.Action("Index", "My")"><i class="fa fa-user f24"></i></a>
+    </header>
+
+    @RenderBody()
+
+    <!-- 底部 -->
+    <div class="cp-footer">
+        <ul>
+            <li><a href="@Url.Action("Index", "TECenter")">测评中心</a></li>
+            <li><a href="@Url.Action("Index", "JoinIn")">我要加盟</a></li>
+            <li><a href="@Url.Action("Index", "My")">我的测评</a></li>
+        </ul>
     </div>
-    <script src="@Url.Content("~/Scripts/zepto.min.js")"></script>
+
+    @*<script src="@Url.Content("~/Scripts/zepto.min.js")"></script>
     <script src="@Url.Content("~/scripts/slide.1.0.js")"></script>
-    @*<script src="@Url.Content("~/scripts/jquery.cookie.js")"></script>*@
+    <script src="@Url.Content("~/scripts/jquery.cookie.js")"></script>*@
     <script>
         @*if ($(".user_layer").length > 0) {
             $(".user_img").attr("src", $.cookie("Hot371.Cookie.HeadImg"));

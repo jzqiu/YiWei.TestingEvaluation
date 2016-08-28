@@ -33,5 +33,16 @@ namespace YiWei.TestingEvaluation.Domain
             report.CreateDate = DateTime.Now;
             return _data.InsertReport(report);
         }
+
+        public MBTIReport HadTest(string openId, int testingType)
+        {
+            IEnumerable<MBTIReport> list = _data.QueryReports(openId, testingType);
+            if (list != null && list.Any())
+            {
+                return list.OrderByDescending(r => r.Id).First();
+            }
+
+            return new MBTIReport();
+        }
     }
 }

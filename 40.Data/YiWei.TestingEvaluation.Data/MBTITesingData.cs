@@ -38,5 +38,16 @@ namespace YiWei.TestingEvaluation.Data
                 return false;
             }
         }
+
+        public IEnumerable<MBTIReport> QueryReports(string openId, int testingType)
+        {
+            using (_connection = DBHelper.GetOpenConnection())
+            {
+                IEnumerable<MBTIReport> list =
+                    _connection.GetList<MBTIReport>(new {OpenId = openId, TestingType = testingType});
+
+                return list;
+            }
+        }
     }
 }
