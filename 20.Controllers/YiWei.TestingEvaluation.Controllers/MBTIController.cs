@@ -20,6 +20,7 @@ namespace YiWei.TestingEvaluation.Controllers
 
         public ActionResult Index(int tid)
         {
+            ViewBag.TId = tid;
             return View();
         }
 

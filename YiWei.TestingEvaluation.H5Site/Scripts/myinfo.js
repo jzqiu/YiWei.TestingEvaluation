@@ -1,18 +1,51 @@
-var _p = $.trim($("#MainContent_hdp").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdp").val()));
-var _c = $.trim($("#MainContent_hdc").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdc").val()));
-var _d = $.trim($("#MainContent_hdd").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdd").val()));
+//var _p = $.trim($("#MainContent_hdp").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdp").val()));
+//var _c = $.trim($("#MainContent_hdc").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdc").val()));
+//var _d = $.trim($("#MainContent_hdd").val()) == "" ? 0 : parseInt($.trim($("#MainContent_hdd").val()));
 
-var data = {
-    provinceId: 0,
-    provinceName: "",
-    cityId: 0,
-    cityName: "",
-    districtId: 0,
-    districtName: ""
-};
+//var data = {
+//    provinceId: 0,
+//    provinceName: "",
+//    cityId: 0,
+//    cityName: "",
+//    districtId: 0,
+//    districtName: ""
+//};
 $().ready(function() {
-    getprovince();
+    //getprovince();
+    $(".rule-multi-radio").ruleMultiRadio();
 });
+//多项单选
+$.fn.ruleMultiRadio = function() {
+    var multiRadio = function(parentObj) {
+        parentObj.addClass("multi-radio"); //添加样式
+        parentObj.children().hide(); //隐藏内容
+        var divObj = $('<div class="boxwrap"></div>').prependTo(parentObj); //前插入一个DIV
+        parentObj.find('input[type="radio"]').each(function() {
+            var indexNum = parentObj.find('input[type="radio"]').index(this); //当前索引
+            var newObj = $('<a href="javascript:;">' + parentObj.find('label').eq(indexNum).text() + '</a>').appendTo(divObj); //查找对应Label创建选项
+            if ($(this).prop("checked") == true) {
+                newObj.addClass("selected"); //默认选中
+            }
+            //检查控件是否启用
+            if ($(this).prop("disabled") == true) {
+                newObj.css("cursor", "default");
+                return;
+            }
+            //绑定事件
+            $(newObj).click(function() {
+                $(this).siblings().removeClass("selected");
+                $(this).addClass("selected");
+                parentObj.find('input[type="radio"]').prop("checked", false);
+                parentObj.find('input[type="radio"]').eq(indexNum).prop("checked", true);
+                parentObj.find('input[type="radio"]').eq(indexNum).trigger("click"); //触发对应的radio的click事件
+                //alert(parentObj.find('input[type="radio"]').eq(indexNum).prop("checked"));
+            });
+        });
+    };
+    return $(this).each(function() {
+        multiRadio($(this));
+    });
+};
 
 var getprovince = function() {
     $.ajax({
@@ -119,121 +152,120 @@ var getdistrict = function(id) {
     });
 }
 
-var gradeObj = $("#clkgrade");
-gradeObj.find('input[type="radio"]').each(function() {
-    var indexNum = gradeObj.find('input[type="radio"]').index(this);
-    var newObj = gradeObj.find("a").eq(indexNum);
-    if ($(this).prop("checked") == true) {
-        newObj.addClass("selected");
-    }
-    $(newObj).on("click", function() {
-        $(this).parent().parent().find("a").removeClass("selected");
-        $(this).addClass("selected");
-        gradeObj.find('input[type="radio"]').prop("checked", false);
-        gradeObj.find('input[type="radio"]').eq(indexNum).prop("checked", true);
-        gradeObj.find('input[type="radio"]').eq(indexNum).trigger("click");
-    });
-});
+//var gradeObj = $("#clkgrade");
+//gradeObj.find('input[type="radio"]').each(function() {
+//    var indexNum = gradeObj.find('input[type="radio"]').index(this);
+//    var newObj = gradeObj.find("a").eq(indexNum);
+//    if ($(this).prop("checked") == true) {
+//        newObj.addClass("selected");
+//    }
+//    $(newObj).on("click", function() {
+//        $(this).parent().parent().find("a").removeClass("selected");
+//        $(this).addClass("selected");
+//        gradeObj.find('input[type="radio"]').prop("checked", false);
+//        gradeObj.find('input[type="radio"]').eq(indexNum).prop("checked", true);
+//        gradeObj.find('input[type="radio"]').eq(indexNum).trigger("click");
+//    });
+//});
 
 
-$(".choose_city").parent().on("click", function() {
-    $(".address_wrapper").show();
-    $(".page").hide();
+//$(".choose_city").parent().on("click", function() {
+//    $(".address_wrapper").show();
+//    $(".page").hide();
 
-    $(".left_box").scrollTop(0);
-    $(".center_box").scrollTop(0);
-    $(".right_box").scrollTop(0);
-    var t = $(".left_box").find("p[class='selected']").offset();
-    $(".left_box").scrollTop(t.top);
-    t = $(".center_box").find("p[class='selected']").offset();
-    $(".center_box").scrollTop(t.top);
-    t = $(".right_box").find("p[class='selected']").offset();
-    $(".right_box").scrollTop(t.top);
-});
+//    $(".left_box").scrollTop(0);
+//    $(".center_box").scrollTop(0);
+//    $(".right_box").scrollTop(0);
+//    var t = $(".left_box").find("p[class='selected']").offset();
+//    $(".left_box").scrollTop(t.top);
+//    t = $(".center_box").find("p[class='selected']").offset();
+//    $(".center_box").scrollTop(t.top);
+//    t = $(".right_box").find("p[class='selected']").offset();
+//    $(".right_box").scrollTop(t.top);
+//});
 
 
-$(".left_box").delegate("p", "click", function() {
-    $(this).parent().find("p").removeClass("selected");
-    $(this).addClass("selected");
+//$(".left_box").delegate("p", "click", function() {
+//    $(this).parent().find("p").removeClass("selected");
+//    $(this).addClass("selected");
 
-    var id = $(this).attr("data-id");
-    if (id == 0)
-        return false;
-    data.provinceId = id;
-    data.provinceName = $(this).text();
-    data.cityId = 0;
-    data.cityName = "";
-    data.districtId = 0;
-    data.districtName = "";
+//    var id = $(this).attr("data-id");
+//    if (id == 0)
+//        return false;
+//    data.provinceId = id;
+//    data.provinceName = $(this).text();
+//    data.cityId = 0;
+//    data.cityName = "";
+//    data.districtId = 0;
+//    data.districtName = "";
 
-    $(".center_box").html("").hide();
-    $(".right_box").html("").hide();
+//    $(".center_box").html("").hide();
+//    $(".right_box").html("").hide();
 
-    $(".center_box").html(getcity(id)).show();
-});
+//    $(".center_box").html(getcity(id)).show();
+//});
 
 
 //城市
-$(".center_box").delegate("p", "click", function() {
-    $(this).parent().find("p").removeClass("selected");
-    $(this).addClass("selected");
+//$(".center_box").delegate("p", "click", function() {
+//    $(this).parent().find("p").removeClass("selected");
+//    $(this).addClass("selected");
 
-    var id = $(this).attr("data-id");
-    if (id == 0)
-        return false;
-    data.cityId = id;
-    data.cityName = $(this).text();
-    data.districtId = 0;
-    data.districtName = "";
+//    var id = $(this).attr("data-id");
+//    if (id == 0)
+//        return false;
+//    data.cityId = id;
+//    data.cityName = $(this).text();
+//    data.districtId = 0;
+//    data.districtName = "";
 
-    $(".right_box").html("").hide();
+//    $(".right_box").html("").hide();
 
-    $(".right_box").html(getdistrict(id)).show();
-});
+//    $(".right_box").html(getdistrict(id)).show();
+//});
 
 
-//地区
-$(".right_box").delegate("p", "click", function() {
-    $(this).parent().find("p").removeClass("selected");
-    $(this).addClass("selected");
-    var id = $(this).attr("data-id");
-    if (id == 0)
-        return false;
-    data.districtId = id;
-    data.districtName = $(this).text();
+////地区
+//$(".right_box").delegate("p", "click", function() {
+//    $(this).parent().find("p").removeClass("selected");
+//    $(this).addClass("selected");
+//    var id = $(this).attr("data-id");
+//    if (id == 0)
+//        return false;
+//    data.districtId = id;
+//    data.districtName = $(this).text();
 
-    if (data.provinceName == data.cityName)
-        $(".choose_city").text(data.provinceName + "，" + data.districtName);
-    else
-        $(".choose_city").text(data.provinceName + "，" + data.cityName + "，" + data.districtName);
+//    if (data.provinceName == data.cityName)
+//        $(".choose_city").text(data.provinceName + "，" + data.districtName);
+//    else
+//        $(".choose_city").text(data.provinceName + "，" + data.cityName + "，" + data.districtName);
 
-    $("#MainContent_hdp").val(data.provinceId);
-    $("#MainContent_hdc").val(data.cityId);
-    $("#MainContent_hdd").val(data.districtId);
+//    $("#MainContent_hdp").val(data.provinceId);
+//    $("#MainContent_hdc").val(data.cityId);
+//    $("#MainContent_hdd").val(data.districtId);
 
-    $(".address_wrapper").hide();
-    $(".page").show();
-});
+//    $(".address_wrapper").hide();
+//    $(".page").show();
+//});
 
 
 function checkSave() {
 
-    if ($("#MainContent_hdp").val() == "" || $("#MainContent_hdp").val() == "0" || $("#MainContent_hdc").val() == "" || $("#MainContent_hdc").val() == "0" || $("#MainContent_hdd").val() == "" || $("#MainContent_hdd").val() == "0") {
-        showTipLayer($(".choose_city"), {
-            msg: "请选择您的现居住地",
-            type: 1,
-            showtime: 3
-        });
-        return false;
-    }
+    //if ($("#MainContent_hdp").val() == "" || $("#MainContent_hdp").val() == "0" || $("#MainContent_hdc").val() == "" || $("#MainContent_hdc").val() == "0" || $("#MainContent_hdd").val() == "" || $("#MainContent_hdd").val() == "0") {
+    //    showTipLayer($(".choose_city"), {
+    //        msg: "请选择您的现居住地",
+    //        type: 1,
+    //        showtime: 3
+    //    });
+    //    return false;
+    //}
 
-    var reg = /^[\u4E00-\u9FA5]+$/;
     var e = $("#MainContent_txtName");
-    if ($.trim(e.val()) == "" || !reg.test($.trim(e.val())) || $.trim(e.val()).length < 2) {
+    if ($.trim(e.val()) == "") {
         showTipLayer(e, {
-            msg: "请输入中文姓名",
+            msg: "请输入测试者姓名",
             type: 1,
-            showtime: 3
+            showtime: 1.5
         });
         e.focus();
         return false;
@@ -255,22 +287,22 @@ function checkSave() {
         return false;
     }
 
-    ischecked = false;
-    $("#MainContent_rblGrade input[type='radio']").each(function() {
-        if ($(this).prop("checked")) {
-            ischecked = true;
-            return false;
-        }
-    });
+    //ischecked = false;
+    //$("#MainContent_rblGrade input[type='radio']").each(function() {
+    //    if ($(this).prop("checked")) {
+    //        ischecked = true;
+    //        return false;
+    //    }
+    //});
 
-    if (!ischecked) {
-        showTipLayer($("#clkgrade"), {
-            msg: "请选择年级",
-            type: 1,
-            showtime: 3
-        });
-        return false;
-    }
+    //if (!ischecked) {
+    //    showTipLayer($("#clkgrade"), {
+    //        msg: "请选择年级",
+    //        type: 1,
+    //        showtime: 3
+    //    });
+    //    return false;
+    //}
 
 
     loadingR();

@@ -16,8 +16,7 @@ namespace YiWei.TestingEvaluation.Controllers
 
         public ActionResult BaseInfo()
         {
-            return Content(OpenId);
-            //return View();
+            return View();
         }
 
         //[HttpPost]

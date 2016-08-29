@@ -10,18 +10,17 @@ namespace YiWei.TestingEvaluation.Controllers
 {
     public class PayController : BaseController
     {
-        public ActionResult Index()
+        public ActionResult Index(int tid)
         {
             string orderNo = GenerateOutTradeNo();
             WxPayData wxOrder = new JsApiPay().UnifiedOrder(orderNo, "测试支付", "test", 10, "oIdbxw8WdYPauF_m1qR-tkSJk644");
             if (wxOrder.GetValue("return_code").ToString().ToUpper() == "SUCCESS"
                 && wxOrder.GetValue("result_code").ToString().ToUpper() == "SUCCESS")
             {
-                string para = new JsApiPay().GetJsApiParameters(wxOrder.GetValue("prepay_id").ToString());
-                ViewBag.Para = para;
+                wxOrder = new JsApiPay().GetJsApiParameters(wxOrder.GetValue("prepay_id").ToString());
             }
-            
-            return View();
+
+            return View(wxOrder);
         }
 
         public string WxNotify()

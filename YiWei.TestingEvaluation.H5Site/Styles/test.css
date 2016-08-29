@@ -121,7 +121,7 @@ input[type="button"] { -webkit-appearance: none; outline: none; }
 body { padding-top: 49px; padding-bottom: 53px; }
 .cp-header { position: fixed; top: 0; left: 0; right: 0; z-index: 99; width: 100%; height: 49px; line-height: 49px; padding: 0 10px; background: #0e716e; }
 .header_left { display: inline-block; color: #eee; }
-.header_icon { height: 40px; margin-right: 5px; margin-bottom: 8px; border-radius: 50%; }
+.header_icon { height: 40px; margin-right: 5px; /*margin-bottom: 8px;*/ border-radius: 50%; }
 .header_right { position: absolute; top: 0; right: 10px; color: #eee; }
 
 

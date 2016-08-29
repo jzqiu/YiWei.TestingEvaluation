@@ -1,5 +1,32 @@
 ﻿@{
     ViewBag.Title = "会员中心";
 }
+@section styles
+{
+    <link href="@Url.Content("~/Styles/my.css")" rel="stylesheet" type="text/css" />
+}
 
-<h2>Index</h2>
+<div>
+    <div class=" mydetail clearfix">
+        <div class="user">
+            <div class="userHead">
+                <i>
+                    <img src="http://wx.qlogo.cn/mmopen/njJiaKpBD2IalRSc93ajka8bU9QsbunplaTN1TqnfvpibNMr7vgPLWQ5oib1A2mguWaB47qw93QoNsRjKL4F2D1UmCW24UfMBrZ/0" />
+                </i>
+                陈龙
+            </div>
+        </div>
+    </div>
+
+    <div class="myMenu b_tb">
+        <ul>
+            <li>
+                <a href="@Url.Action("BaseInfo")"> <i><img src="@Url.Content("~/images/myinfo.png")"/></i>基本信息</a>
+            </li>
+            <li>	
+                <a href="../MBTI/report.aspx?"> <i><img style="border-radius:50%;" src="../Images/IconImg/MBTIIcon.png"/></i>性格类型测评（青少年自评版）</a>
+            </li>
+        </ul>
+    </div>
+
+</div>

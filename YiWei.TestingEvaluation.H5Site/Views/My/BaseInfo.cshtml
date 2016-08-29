@@ -2,4 +2,42 @@
     ViewBag.Title = "基本信息";
 }
 
-<h2>BaseInfo</h2>
+@section styles
+{
+    <link href="@Url.Content("~/styles/myinfo.css")" rel="stylesheet" type="text/css">
+}
+
+<div>
+    <div class="tips none">确认测评者信息后开始答题！</div>
+    <div class="page f14">
+        <ul class="ul">
+            <li>
+                <div class="left"><span class="red">*</span>测试者姓名</div>
+                <div class="right"><input name="ctl00$MainContent$txtName" type="text" value="" maxlength="10" id="MainContent_txtName" /></div>
+            </li>
+            <li> 
+                <div class="left"><span class="red">*</span>测试者性别</div>
+                <div class="right">
+                    <div class="rule-multi-radio">
+                        <span id="MainContent_rblChildrenSex">
+                            <input id="MainContent_rblChildrenSex_0" type="radio" name="ctl00$MainContent$rblChildrenSex" value="1" checked="checked" />
+                            <label for="MainContent_rblChildrenSex_0">男</label>
+                            <input id="MainContent_rblChildrenSex_1" type="radio" name="ctl00$MainContent$rblChildrenSex" value="2" />
+                            <label for="MainContent_rblChildrenSex_1">女</label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="tc mb15" style="height:80px;padding-top:15px;" >
+                <input type="submit" name="ctl00$MainContent$btnSave" value="提  交" onclick="return checkSave();" id="MainContent_btnSave" class="btn-green" /> 
+            </li>
+        </ul>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="@Url.Content("~/scripts/jquery-1.11.1.min.js")"></script>
+    <script src="@Url.Content("~/scripts/dek.js")"></script>
+    <script src="@Url.Content("~/scripts/myinfo.js")"></script>
+}

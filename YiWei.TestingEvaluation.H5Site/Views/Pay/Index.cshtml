@@ -1,4 +1,5 @@
-﻿@{
+﻿@model YiWei.WeiXin.Domain.WXPay.WxPayData
+@{
     ViewBag.Title = "去付款";
 }
 
@@ -61,11 +62,18 @@
 
 @section scripts
 {
-    @*<script type="text/javascript">
+    <script type="text/javascript">
         function onBridgeReady() {
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest', 
-                {"appId":"wx9930b34a6ce0dd45","nonceStr":"ca08f2dc88b84e0f9e15c4733f296f1a","package":"prepay_id=wx201608271718006e177d06320216133782","paySign":"D584A5414F3F9FDA34E645A2E85161EA","signType":"MD5","timeStamp":"1472289331"},
+                {
+                    "appId": "@Model.GetValue("appId")",
+                    "nonceStr": "@Model.GetValue("nonceStr")",
+                    "package": "@Model.GetValue("package")",
+                    "paySign": "@Model.GetValue("paySign")",
+                    "signType": "MD5",
+                    "timeStamp": "@Model.GetValue("timeStamp")"
+                },
                 function(res) {
                     if (res.err_msg == "get_brand_wcpay_request：ok") {
                         window.location.href = "http://ceping.yiiway.com/test/";
@@ -96,5 +104,5 @@
                 onBridgeReady();
             }
         }
-    </script>*@
+    </script>
 }

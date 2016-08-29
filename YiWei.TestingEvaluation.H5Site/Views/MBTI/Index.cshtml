@@ -42,14 +42,19 @@
             <div class="temp"></div>
 
             <div class="tc btnFooter">
-                <input type="button" value="立即测试" class="btn-green btn-green-big"/>
+                <input type="button" value="立即测试" class="btn-green btn-green-big" onclick="goto()"/>
             </div>
 
         </div>
 
 @section scripts
 {
-    <script src="@Url.Content("~/Scripts/jquery-1.11.1.min.js")" type="text/javascript"></script>
+    <script type="text/javascript">
+        var goto=function() {
+            window.location.href = '@Url.Action("Index", "Pay", new{ViewBag.TId})';
+        }
+    </script>    
+    @*<script src="@Url.Content("~/Scripts/jquery-1.11.1.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/dialog.js")" type="text/javascript"></script>
     <script type="text/javascript">
         $().ready(function () {
@@ -77,5 +82,5 @@
                 });
             });
         });
-    </script>
+    </script>*@
 }

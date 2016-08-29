@@ -118,25 +118,6 @@ namespace YiWei.TestingEvaluation.Entity.TT
 	}
 
     /// <summary>
-    /// A class which represents the MemberChildren table.
-    /// </summary>
-	[Table("MemberChildren")]
-	public partial class MemberChildren
-	{
-		[Key]
-		public virtual int Id { get; set; }
-		public virtual string BelongToOpenId { get; set; }
-		public virtual string ChildrenName { get; set; }
-		public virtual int? ChildrenSex { get; set; }
-		public virtual DateTime? Birthdate { get; set; }
-		public virtual int? GaokaoProvince { get; set; }
-		public virtual string Grade { get; set; }
-		public virtual int? EnterSchoolYear { get; set; }
-		public virtual string SchoolName { get; set; }
-		public virtual DateTime? CreateDate { get; set; }
-	}
-
-    /// <summary>
     /// A class which represents the MBTI_Report table.
     /// </summary>
 	[Table("MBTI_Report")]
@@ -156,7 +137,46 @@ namespace YiWei.TestingEvaluation.Entity.TT
 		public virtual string TypeCode { get; set; }
 		public virtual int? TestingType { get; set; }
 		public virtual string OrderNo { get; set; }
+		public virtual int? IsFinished { get; set; }
 		public virtual DateTime CreateDate { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the MemberChildren table.
+    /// </summary>
+	[Table("MemberChildren")]
+	public partial class MemberChildren
+	{
+		[Key]
+		public virtual long Id { get; set; }
+		public virtual string BelongToOpenId { get; set; }
+		public virtual string ChildrenName { get; set; }
+		public virtual int? ChildrenSex { get; set; }
+		public virtual DateTime? Birthdate { get; set; }
+		public virtual int? GaokaoProvince { get; set; }
+		public virtual string Grade { get; set; }
+		public virtual int? EnterSchoolYear { get; set; }
+		public virtual string SchoolName { get; set; }
+		public virtual DateTime? CreateDate { get; set; }
+	}
+
+    /// <summary>
+    /// A class which represents the LogWxPayNotify table.
+    /// </summary>
+	[Table("LogWxPayNotify")]
+	public partial class LogWxPayNotify
+	{
+		[Key]
+		public virtual long Id { get; set; }
+		public virtual string TransactionId { get; set; }
+		public virtual string ReturnCode { get; set; }
+		public virtual string ResultCode { get; set; }
+		public virtual string ReturnMsg { get; set; }
+		public virtual string OpenId { get; set; }
+		public virtual string OutTradeNo { get; set; }
+		public virtual string Attach { get; set; }
+		public virtual int? TotalFee { get; set; }
+		public virtual DateTime? CtreateTime { get; set; }
 	}
 
     /// <summary>

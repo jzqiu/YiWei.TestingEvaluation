@@ -1,5 +1,5 @@
 .mydetail{background:#f7f7f7; }
-.mydetail .user{box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); background:#fff; padding:15px; line-height:24px; margin-bottom:15px;}
+.mydetail .user{/*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);*/ background:#fff; padding:15px; line-height:24px; /*margin-bottom:15px;*/}
 .mydetail .user .userHead{text-align:center; font-size:16px;}
 .mydetail .user .userHead i{display:block;}
 .mydetail .user .userHead i img{width:70px; border-radius:50%;}

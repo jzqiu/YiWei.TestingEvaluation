@@ -1,2 +1,53 @@
-﻿body {
+html, body, div, p, ol, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, img, input, select, button, textarea, iframe, table, th, td { margin: 0; padding: 0; }
+img { border: none; vertical-align: middle; }
+ol, ul, li { list-style-type: none; }
+h1, h2, h3, h4, h5, h6, table, th, td { font-weight: normal; font-size: 100%; }
+html { font-size: 62.5%; -webkit-tap-highlight-color: transparent; }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.428571429; color: #333; background-color: #fff }
+.normal, em, i { font-style: normal; font-weight: normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+p { word-wrap: break-word; }
+a { color: #2f2f2f; text-decoration: none; }
+input { -webkit-appearance: none; outline: none; }
+*,:before, :after { box-sizing: border-box; }
+
+/* 字体图标 */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.fa-user:before {
+  content: "\f007"
+}
+.tc { text-align: center; }
+.f24 { font-size: 24px; }
+.mt60 { margin-top: 60px; } 
+
+body { padding-top: 49px; padding-bottom: 53px; }
+.cp-header { position: fixed; top: 0; left: 0; right: 0; z-index: 99; width: 100%; height: 49px; line-height: 49px; padding: 0 10px; background: #0e716e; }
+.header_left { display: inline-block; color: #eee; }
+.header_icon { height: 40px; margin-right: 5px; /*margin-bottom: 8px;*/ border-radius: 50%; }
+.header_right { position: absolute; top: 0; right: 10px; color: #eee; }
+
+
+.cp-footer { position: fixed; left: 0; bottom: 0;  z-index: 99;width: 100%; height: 45px; line-height: 45px; background: #F1F1F1; color: #333333; }
+.cp-footer ul { padding: 0 8px 0 8px; border-top: 1px solid #dedede; text-align: center; overflow: hidden; display: -webkit-box; display: -webkit-flex; display: flex }
+.cp-footer li { -webkit-box-flex: 1; -webkit-flex: 1; flex: 1; float: none }
+.cp-footer li+li { border-left: 1px solid #dedede; }
+.cp-footer a { color: #333333; font-size: 1.6rem; }
+
+.loading-still { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; overflow: auto; }
+.loading { background: url(../images/loading.gif) no-repeat; border: 0; width: 32px; height: 32px; z-index: 9000; top: 0; left: 0; position: absolute; }
+.loadingBg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 8888; vertical-align: middle; overflow: auto; }
+.loadingBg { background: #666666 url(../Images/ui-bg_diagonals-thick_20_666666_40x40.png) 50% 50% repeat; opacity: .70; filter: Alpha(Opacity=70); }
+.loadingMiddle { top: 50%; left: 50%; }

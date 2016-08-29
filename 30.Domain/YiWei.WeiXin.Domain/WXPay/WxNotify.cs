@@ -13,9 +13,10 @@ namespace YiWei.WeiXin.Domain.WXPay
             using (System.IO.Stream s = System.Web.HttpContext.Current.Request.InputStream)
             {
                 int count = 0;
-                byte[] buffer = new byte[1024];
+                int length = Convert.ToInt32(System.Web.HttpContext.Current.Request.InputStream.Length);
+                byte[] buffer = new byte[length];
                 StringBuilder builder = new StringBuilder();
-                while ((count = s.Read(buffer, 0, 1024)) > 0)
+                while ((count = s.Read(buffer, 0, length)) > 0)
                 {
                     builder.Append(Encoding.UTF8.GetString(buffer, 0, count));
                 }

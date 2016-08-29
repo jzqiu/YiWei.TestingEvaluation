@@ -1,0 +1,44 @@
+body { font-size: 14px; }
+.tips { line-height: 50px; text-align: center; color: #e90157; }
+.none{ display: none;}
+
+.ul li { position: relative; padding: 5px 0 5px 5px; line-height: 36px; border-top: 1px solid #DDD; overflow: hidden; }
+.ul li:last-child { border-bottom: 1px solid #DDD; }
+.left { width: 40%; float: left; }
+.right { width: 60%; float: left; }
+.ul li div { display: inline-block; }
+.rule-multi-radio { float: right; }
+.page input[type="text"], .page input[type="tel"], .page input[type="number"], .page input[type="date"], .page textarea { float: right; width: 100%; height: 36px; line-height: 36px; text-align: right; border: none; background: url(../images/right.png) 99% center no-repeat; background-size: 6px; padding-right: 20px; }
+.red { color: Red; padding-right: 5px; }
+.gaokaoProvince, .choose_city { white-space: nowrap; text-overflow: ellipsis; -o-text-overflow: ellipsis; overflow: hidden; float: right; width: 100%; height: 36px; line-height: 36px; color: #777; text-align: right; border: none; background: url(../images/right.png) 99% center no-repeat; background-size: 6px; padding-right: 20px; }
+.btn-green { text-align: center; background: #14ae67; color: #fff; border: none; height: 40px; padding: 0 10px; line-height: 40px; cursor: pointer; min-width: 120px; font-size: 16px; display: block; overflow: visible; margin: auto; }
+
+.address_wrapper { display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999;}
+.address_wrapper .left_box { position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: scroll; background-color: white; }
+.address_wrapper .center_box { display: none; position: absolute; top: 0; right: 0; bottom: 0; left: 33%; overflow: scroll; background-color: #f7f7f7; }
+.address_wrapper .right_box { display: none; position: absolute; top: 0; right: 0; bottom: 0; width: 33%; overflow: scroll; background-color: #f0f0f0; }
+.address_wrapper .center_box .selected { background-color: #999; }
+.address_wrapper .left_box .selected { background-color: #999; }
+.address_wrapper .right_box .selected { background-color: #999; }
+.address_wrapper p { line-height: 44px; padding: 0 10px; border-top: 1px solid #eaeaea; }
+.reportFooter {padding: 15px;background-color: rgba(0,0,0,.5);position: fixed;width: 100%;bottom: 60px;left: 0;}
+
+/*多项单选*/
+.multi-radio{ display:inline-block; vertical-align:middle; *display:inline;}
+.multi-radio:after{ clear:both; content:"."; display:block; height:0; visibility:hidden; }
+.multi-radio .boxwrap{ display:inline-block; vertical-align:middle; *display:inline;}
+/**.multi-radio a{ display:inline-block; margin-right:-1px; float:left; padding:5px 15px; height:20px; line-height:20px; border:1px solid #d4d4d4; vertical-align:middle; color:#333; font-size:100%; cursor:pointer; }**/
+.multi-radio a{  padding:5px 15px;border:1px solid #d4d4d4; vertical-align:middle; color:#777; font-size:100%; cursor:pointer; }
+.multi-radio a:first-child {border-radius:30px 0px 0px 30px; }
+.multi-radio a:last-child { border-radius:0px 30px 30px 0px; }
+.multi-radio a:hover{ background:#C9E1EF; text-decoration:none; }
+.multi-radio a:active{ text-decoration:none; }
+.multi-radio a.selected{ background:#14ae67; border-color:#14ae67; color:#fff; }
+.tipLayer { position: absolute; display: none; z-index: 13000; font-size: 14px; max-width: 200px; }
+.tipLayer .content { border: 1px solid #dd3c10; background: #ffebe8; color: #333; font-weight: bold; padding: 5px 5px; text-align: center; }
+.tipLayer .tip-error { border: 1px solid #dd3c10; background: #ffebe8; color: #333; font-weight: bold; padding: 5px 5px; text-align: center; }
+.tipLayer .tip-error i { margin-right: 5px; color: #dd3c10; font-size: 18px; }
+.tipLayer .tip-warning { border: 1px solid #ff9000; background: #ffebe8; color: #333; font-weight: bold; padding: 5px 5px; text-align: center; }
+.tipLayer .tip-warning i { margin-right: 5px; color: #ff9000; font-size: 18px; }
+.tipLayer .tip-success { border: 1px solid #14ae67; background: #F4F1E9; color: #333; font-weight: bold; padding: 5px 5px; text-align: center; }
+.tipLayer .tip-success i { margin-right: 5px; color: #14ae67; font-size: 18px; }

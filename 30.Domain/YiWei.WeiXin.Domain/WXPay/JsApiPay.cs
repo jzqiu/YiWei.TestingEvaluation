@@ -38,7 +38,7 @@ namespace YiWei.WeiXin.Domain.WXPay
         * 更详细的说明请参考网页端调起支付API：http://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7
         * 
         */
-        public string GetJsApiParameters(string prepayId)
+        public WxPayData GetJsApiParameters(string prepayId)
         {
             var jsApiParam = new WxPayData();
             jsApiParam.SetValue("appId", Config.AppId);
@@ -48,8 +48,7 @@ namespace YiWei.WeiXin.Domain.WXPay
             jsApiParam.SetValue("signType", "MD5");
             jsApiParam.SetValue("paySign", jsApiParam.MakeSign());
 
-            string parameters = jsApiParam.ToJson();
-            return parameters;
+            return jsApiParam;
         }
     }
 }
