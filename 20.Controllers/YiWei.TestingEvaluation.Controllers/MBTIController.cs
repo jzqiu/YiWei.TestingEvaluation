@@ -39,14 +39,22 @@ namespace YiWei.TestingEvaluation.Controllers
         public ActionResult Testing(int tid)
         {
             IEnumerable<MBTIQuestion> list = _service.GetQuestion(tid);
-            return Json(list, JsonRequestBehavior.AllowGet);
-            //return View();
+            return View(list);
         }
 
         [HttpPost]
-        public ActionResult Testing(MBTIReport report)
+        public ActionResult Testing(string answers)
         {
+            var report=new MBTIReport();
             report.OpenId = this.OpenId;
+            report.E = answers.Length - answers.Replace("E", "").Length;
+            report.I = answers.Length - answers.Replace("I", "").Length;
+            report.F = answers.Length - answers.Replace("F", "").Length;
+            report.J = answers.Length - answers.Replace("J", "").Length;
+            report.N = answers.Length - answers.Replace("N", "").Length;
+            report.P = answers.Length - answers.Replace("P", "").Length;
+            report.S = answers.Length - answers.Replace("S", "").Length;
+            report.T = answers.Length - answers.Replace("T", "").Length;
             bool result = _service.AddReport(report);
 
             return Content("ok");
